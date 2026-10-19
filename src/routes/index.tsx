@@ -105,7 +105,7 @@ const bonus = [
   ["📸","Guia de Fotos com Celular","Foto de anúncio que vende, sem estúdio","/bonus/guia-fotos.html"],
   ["🏆","Os 15 Nichos de Ouro da Impressão 3D 2026","Os nichos que mais vendem pra você começar certo","https://fiapy.nyc3.cdn.digitaloceanspaces.com/static/69ac463d238dee7b019e540d/dab203f6b4e832f989ad_-_os_15_nichos_de_ouro_da_impress%C3%A3o_3d_para_2026.pdf"],
 ] as const;
-const nav = ["Leia antes de começar","Guia do Iniciante","Início","Arquivos STL","Calculadora","Administração","Bônus","Licença Comercial","Suporte"] as const;
+const nav = [["Leia antes de começar","📌"],["Guia do Iniciante","🎓"],["Início","🏠"],["Arquivos STL","📦"],["Calculadora","🧮"],["Administração","📊"],["Bônus","🎁"],["Licença Comercial","📜"],["Suporte","💬"]] as const;
 const money = (n:number) => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 
 function PrimeArea() {
@@ -141,7 +141,7 @@ function PrimeArea() {
     <aside className={`fixed inset-y-0 left-0 z-40 flex w-[276px] flex-col border-r border-white/10 bg-[#111113] p-4 transition-transform duration-300 md:sticky md:translate-x-0 ${mobileNav?"translate-x-0":"-translate-x-full"}`}>
       <button onClick={()=>jump("Início")} className="mb-8 flex w-full items-center justify-center gap-3 px-2 pt-1 text-left"><img src={logoUrl} alt="Prime Projetos 3D" className="h-11 w-11 shrink-0 object-contain"/><span className="min-w-0 text-left leading-tight"><span className="block text-sm font-black tracking-wide text-white">PRIME</span><span className="mt-1 block text-[10px] font-bold uppercase tracking-[.12em] text-[#ffd21f]">Projetos 3D</span></span></button>
       <div className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[.22em] text-zinc-600">Área do assinante</div>
-      <nav className="flex flex-1 flex-col gap-1 overflow-y-auto">{nav.map(name=><button key={name} onClick={()=>jump(name)} className={`flex items-center justify-center rounded-xl px-3 py-3 text-center text-sm font-semibold transition-all duration-200 ${section===name?"bg-[#ffd21f] text-black shadow-[0_6px_22px_rgba(255,210,31,.12)]":"text-zinc-400 hover:bg-white/[.06] hover:text-white"}`}>{name}{section===name&&<span className="ml-2 h-1.5 w-1.5 shrink-0 rounded-full bg-black"/>}</button>)}</nav>
+      <nav className="flex flex-1 flex-col gap-1 overflow-y-auto">{nav.map(([name,icon])=><button key={name} onClick={()=>jump(name)} className={`group flex items-center gap-3 rounded-xl px-3 py-3 text-left text-sm font-semibold transition-all duration-200 ${section===name?"bg-[#ffd21f] text-black shadow-[0_6px_22px_rgba(255,210,31,.12)]":"text-zinc-400 hover:bg-white/[.06] hover:text-white"}`}><span className="text-base transition-transform group-hover:scale-110">{icon}</span>{name}{section===name&&<span className="ml-auto h-1.5 w-1.5 rounded-full bg-black"/>}</button>)}</nav>
       <div className="mt-5 border-t border-white/10 px-3 pt-4"><p className="truncate text-xs text-zinc-500">Área exclusiva Prime Projetos 3D</p><button onClick={()=>jump("Suporte")} className="mt-3 text-sm font-semibold text-[#ffd21f] hover:underline">Precisa de ajuda? →</button></div>
     </aside>
     {mobileNav&&<button aria-label="Fechar menu" onClick={()=>setMobileNav(false)} className="fixed inset-0 z-30 bg-black/60 md:hidden"/>}
