@@ -1,5 +1,14 @@
 # Check-in de implementação — estado verificado
 
+## Verificação local em 2026-10-19
+- A verificação inicial não encontrou alterações pendentes. Em uma segunda leitura, `bun.lock` apareceu modificado pelo ambiente; essa alteração não foi feita manualmente nesta revisão.
+- O checkout local está na branch interna `edit/edt-f8573203-529d-4e2c-99be-539c935ca9e9`, não em `main`. A conexão externa com o GitHub e o estado da branch principal não foram confirmados por esta inspeção local.
+- Último commit local observado antes desta atualização: `1f445824f0601e1223cf23604a19f173d06d0160` (`Work in progress`). Isso não comprova um commit na branch principal do GitHub.
+- Presentes: as três páginas HTML em `public/bonus/` e a migration `supabase/migrations/00000000000000_copyai_new_equivalent_schema.sql`. A presença desses arquivos não comprova importação do ZIP original nem aplicação da migration.
+- Não foram encontrados `src/assets/` nem as páginas capturadas em `pages/` na listagem local. Não há evidência suficiente para declarar importação dos assets originais do ZIP.
+- A compilação automática do Lovable registrou `build OK` em `2026-10-19T13:16:18Z`. O comando manual `vite build`, disponível em `package.json`, não foi executado nesta revisão.
+- Permanecem sem comprovação nesta revisão: comparação visual com o ZIP, testes E2E, aplicação da migration, contratos de backend e sincronização desta atualização com a branch principal do GitHub.
+
 ## Rotas esperadas do pacote
 - [x] `/` — existe uma implementação React inicial, mas ainda não é espelho HTML/CSS pixel-perfect.
 - [x] `/bonus/calendario-natal.html` — página estática existente em `public/bonus/calendario-natal.html`.
@@ -21,7 +30,8 @@
 - [ ] Login/Logout não implementados, pois os contratos são apenas inferidos e não devem ser inventados.
 
 ## Entrega
-- [ ] Build e preview não foram executados neste ambiente.
+- [x] Compilação automática: `build OK` em `2026-10-19T13:16:18Z`; build manual não executado.
+- [ ] Preview e fluxos E2E ainda não foram verificados nesta revisão.
 - [ ] Pixel QA não aprovado.
 - [x] Manifestos de cobertura/entrega foram adicionados com pendências explicitadas.
 
