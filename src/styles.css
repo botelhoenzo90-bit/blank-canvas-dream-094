@@ -143,6 +143,113 @@
   }
 }
 
+/* Prime Projetos 3D — refinamento visual global */
+:root {
+  color-scheme: dark;
+  --prime-yellow: #ffd21f;
+  --prime-yellow-soft: #ffe778;
+  --prime-bg: #09090b;
+  --prime-surface: #131316;
+  --prime-line: rgba(255, 255, 255, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #5c501d #09090b;
+  scrollbar-width: thin;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(ellipse at 78% -12%, rgba(255, 210, 31, 0.055), transparent 34rem),
+    var(--prime-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: #09090b;
+  background: var(--prime-yellow);
+}
+
+:focus-visible {
+  outline: 2px solid var(--prime-yellow);
+  outline-offset: 3px;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+input,
+select,
+textarea {
+  accent-color: var(--prime-yellow);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #71717a;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+main {
+  min-width: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:not([class*="bg-"]):hover {
+    color: var(--prime-yellow-soft);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+    transition-duration: 180ms;
+    transition-timing-function: ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 #lovable-badge {
   display: none !important;
 }
