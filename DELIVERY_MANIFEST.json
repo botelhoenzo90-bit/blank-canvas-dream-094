@@ -1,0 +1,33 @@
+{
+  "project": "Ateliê 3D — Área de Membros",
+  "repository": "https://github.com/botelhoenzo90-bit/blank-canvas-dream-094",
+  "branch": "main",
+  "delivery_status": "partial_not_approved",
+  "latest_known_commits": [
+    {
+      "sha": "0f28c81f56708a8ab55da1c3feeda7cf5455f00b",
+      "summary": "Adicionar página do bônus Top 30 Peças de Natal"
+    },
+    {
+      "sha": "5a0359a06846d7aafb848acac333d0839b8388a3",
+      "summary": "Ligar área de bônus à página Top 30 de Natal"
+    }
+  ],
+  "included_changes": [
+    "Página de bônus Top 30 com 30 itens e layout responsivo",
+    "Link para o novo bônus na seção de bônus da home",
+    "Migration SQL inicial isolada e segura preparada no repositório",
+    "Matriz de backend, check-in e cobertura com estado honesto"
+  ],
+  "not_completed": [
+    "Importar todos os HTML/CSS/assets originais do ZIP",
+    "Resolver as duas capturas diferentes que mapeiam para /",
+    "Conectar projeto Supabase novo e aplicar migration",
+    "Implementar/testar contratos de backend",
+    "Executar build/preview e E2E",
+    "Comparar todas as screenshots em desktop/mobile/estados"
+  ],
+  "build_tested": false,
+  "preview_verified": false,
+  "pixel_qa_passed": false
+}
