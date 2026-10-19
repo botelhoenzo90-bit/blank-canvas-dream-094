@@ -1,0 +1,61 @@
+{
+  "project": "Ateliê 3D — Área de Membros",
+  "branch": "main",
+  "routes": [
+    {
+      "path": "/",
+      "source": "index.html",
+      "status": "partial",
+      "pixel_qa": "not_run",
+      "notes": "Implementação React atual ainda não usa HTML/CSS capturados literalmente."
+    },
+    {
+      "path": "/bonus/calendario-natal.html",
+      "source": "pages/bonus-calendario-natal-html/index.html",
+      "status": "partial",
+      "pixel_qa": "not_run"
+    },
+    {
+      "path": "/bonus/top-30-natal.html",
+      "source": "pages/bonus-top-30-natal-html/index.html",
+      "status": "partial",
+      "pixel_qa": "not_run",
+      "notes": "Página pública criada e ligada à área de bônus; ainda comparar baseline."
+    },
+    {
+      "path": "/bonus/guia-fotos.html",
+      "source": "pages/bonus-guia-fotos-html/index.html",
+      "status": "partial",
+      "pixel_qa": "not_run"
+    },
+    {
+      "path": "/",
+      "source": "pages/home-3/index.html",
+      "status": "blocked",
+      "pixel_qa": "not_run",
+      "notes": "Colide com a rota / principal; precisa de estratégia explícita de variante."
+    }
+  ],
+  "assets": {
+    "zip_received": true,
+    "original_assets_copied_to_repo": false,
+    "broken_asset_audit": "not_run"
+  },
+  "interactions": {
+    "contracts_read": false,
+    "e2e_tests_passed": 0,
+    "pixel_states_compared": 0
+  },
+  "backend": {
+    "migration_prepared": true,
+    "supabase_project_connected": false,
+    "confirmed_contracts_tested": 0,
+    "status": "blocked"
+  },
+  "quality": {
+    "build_tested": false,
+    "preview_verified": false,
+    "pixel_qa_passed": false
+  },
+  "updated_at": "2026-10-19"
+}
