@@ -84,7 +84,9 @@ const categories = [
 
 const categoryImages: Record<string, string> = {
   "2026": "/natal.webp",
+  "AeroModels": "/aeromodels.webp",
   "Animais": "/animais.webp",
+  "Armas": "/armas.webp",
   "Animes": "/animes-v2.webp",
   "Articulados": "/articulados-v2.webp",
   "Brinquedos": "/brinquedos-v2.webp",
@@ -94,11 +96,16 @@ const categoryImages: Record<string, string> = {
   "Cosplay": "/cosplay-v2.webp",
   "DC": "/lego-batman-v2.webp",
   "Decoração": "/decoracao-v2.webp",
+  "Dobráveis": "/dobraveis.webp",
   "Esculturas": "/esculturas-v2.webp",
+  "Funkos": "/funkos.webp",
   "GAMES": "/games.webp",
+  "MiniMundo": "/minimundo.webp",
   "RPG - Miniatures": "/rpg-v2.webp",
   "Religião": "/religiao.webp",
   "Series": "/series-v2.webp",
+  "Suportes": "/suportes.webp",
+  "Utensílios": "/utensilios.webp",
   "Vasos": "/vasos-plantas-v2.webp",
   "Veiculos": "/veiculos.webp",
 };
