@@ -39,6 +39,7 @@ const drive = {
   games: "https://drive.google.com/drive/folders/17Qc42J0iNqqyLWNmEclNQdr7J-b2ZiW8",
 };
 const categories = [
+  ["Pack STL Completo +90 mil","A biblioteca inteira com +90 mil projetos organizados","📦",drive.pack],
   ["2026","Coleção de projetos e modelos organizados para 2026","🗓️","https://drive.google.com/drive/folders/1JHLXlcFhfJqWhvwFBDFEsodwnJEkGRb_"],
   ["AeroModels","Modelos de aeronaves, aviação e veículos aéreos","✈️","https://drive.google.com/drive/folders/1uL04fXD8vvYH9A2De0CqebjYqOdeJHCF"],
   ["Animais","Modelos de animais, miniaturas e peças decorativas","🐾","https://drive.google.com/drive/folders/14AxcgXdrDa8FZFlrE_9Z5m4a2-4nocQR"],
@@ -83,6 +84,7 @@ const categories = [
 ] as const;
 
 const categoryImages: Record<string, string> = {
+  "Pack STL Completo +90 mil": "/pack-completo-v2.webp",
   "2026": "/natal-n3.webp",
   "AeroModels": "/aeromodels-n3.webp",
   "Animais": "/animais.webp",
