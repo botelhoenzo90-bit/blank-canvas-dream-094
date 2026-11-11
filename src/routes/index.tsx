@@ -155,7 +155,7 @@ const bonus = [
   ["📸","Guia de Fotos com Celular","Foto de anúncio que vende, sem estúdio","/bonus/guia-fotos.html"],
   ["🏆","Os 15 Nichos de Ouro da Impressão 3D 2026","Os nichos que mais vendem pra você começar certo","https://fiapy.nyc3.cdn.digitaloceanspaces.com/static/69ac463d238dee7b019e540d/dab203f6b4e832f989ad_-_os_15_nichos_de_ouro_da_impress%C3%A3o_3d_para_2026.pdf"],
 ] as const;
-const nav = [["Leia antes de começar","📌"],["Guia do Iniciante","🎓"],["Início","🏠"],["Biblioteca 3D","📦"],["Comunidade","👥"],["Calculadora","🧮"],["Administração","📊"],["Bônus","🎁"],["Licença Comercial","📜"],["Suporte","💬"]] as const;
+const nav = [["Início","🏠"],["Biblioteca 3D","📦"],["Leia antes de começar","📌"],["Guia do Iniciante","🎓"],["Comunidade","👥"],["Calculadora","🧮"],["Administração","📊"],["Bônus","🎁"],["Licença Comercial","📜"],["Suporte","💬"]] as const;
 const money = (n:number) => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 
 function PrimeArea() {
