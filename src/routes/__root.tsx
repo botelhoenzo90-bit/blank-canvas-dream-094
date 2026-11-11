@@ -78,13 +78,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Página em branco" },
-      { name: "description", content: "Página branca sem conteúdo." },
-      { property: "og:title", content: "Página em branco" },
-      { property: "og:description", content: "Página branca sem conteúdo." },
+      { title: "Prime 3D Biblioteca — Área de Membros" },
+      { name: "description", content: "Mais de 100 mil arquivos STL organizados por categoria, com ferramentas e guias para impressão 3D." },
+      { property: "og:title", content: "Prime 3D Biblioteca — Área de Membros" },
+      { property: "og:description", content: "Mais de 100 mil arquivos STL organizados por categoria, com ferramentas e guias para impressão 3D." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

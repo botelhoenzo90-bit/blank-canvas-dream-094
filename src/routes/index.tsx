@@ -1,11 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import logoUrl from "@/assets/prime-logo.png";
+import logoAsset from "@/assets/prime-logo-3d.png.asset.json";
+import ogAsset from "@/assets/og-prime-biblioteca.png.asset.json";
+
+const logoUrl = logoAsset.url;
+const ogImage = `https://primearquivos3d.lovable.app${ogAsset.url}`;
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "Prime Projetos 3D — Área de Membros" },
     { name: "description", content: "Biblioteca de arquivos STL, ferramentas e guias para impressão 3D." },
+    { property: "og:title", content: "Prime 3D Biblioteca — Área de Membros" },
+    { property: "og:description", content: "Mais de 100 mil arquivos STL organizados por categoria, com ferramentas e guias para impressão 3D." },
+    { property: "og:type", content: "website" },
+    { property: "og:image", content: ogImage },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:image", content: ogImage },
   ]}),
   component: PrimeArea,
 });
@@ -189,7 +199,7 @@ function PrimeArea() {
 
   return <div className="min-h-screen bg-[#f4f7fb] text-[#17324d] md:flex">
     <aside className={`fixed inset-y-0 left-0 z-40 flex h-dvh w-[276px] flex-col overflow-y-auto overscroll-contain border-r border-white/10 bg-[#12385a] p-4 transition-transform duration-300 md:sticky md:top-0 md:h-screen md:translate-x-0 ${mobileNav?"translate-x-0":"-translate-x-full"}`}>
-      <button onClick={()=>jump("Início")} className="mb-8 flex w-full items-center justify-center gap-3 px-2 pt-1 text-left"><img src={logoUrl} alt="Prime Projetos 3D" className="h-11 w-11 shrink-0 object-contain"/><span className="min-w-0 text-left leading-tight"><span className="block text-sm font-black tracking-wide text-white">PRIME</span><span className="mt-1 block text-[10px] font-bold uppercase tracking-[.12em] text-[#ffad55]">Projetos 3D</span></span></button>
+      <button onClick={()=>jump("Início")} className="mb-8 flex w-full items-center justify-center px-2 pt-2"><img src={logoUrl} alt="Prime 3D Biblioteca" className="h-auto w-full max-w-[215px] object-contain"/></button>
       <div className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[.22em] text-[#8293a5]">Área do assinante</div>
       <nav className="flex flex-1 flex-col gap-1 overflow-y-auto">{nav.map(([name,icon])=><button key={name} onClick={()=>jump(name)} className={`group flex items-center gap-3 rounded-xl px-3 py-3 text-left text-sm font-semibold transition-all duration-200 ${section===name?"bg-[#f28c28] text-white shadow-[0_6px_22px_rgba(242,140,40,.18)]":"text-blue-100 hover:bg-white/10 hover:text-white"}`}><span className="text-base transition-transform group-hover:scale-110">{icon}</span>{name}{section===name&&<span className="ml-auto h-1.5 w-1.5 rounded-full bg-black"/>}</button>)}</nav>
       <div className="mt-5 border-t border-white/10 px-3 pt-4"><p className="truncate text-xs text-[#70849a]">Área exclusiva Prime Projetos 3D</p><button onClick={()=>jump("Suporte")} className="mt-3 text-sm font-semibold text-[#ffad55] hover:underline">Precisa de ajuda? →</button></div>
