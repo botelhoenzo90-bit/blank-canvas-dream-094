@@ -168,6 +168,7 @@ const nav = [["Início","🏠"],["Biblioteca 3D","📦"],["Leia antes de começa
 const money = (n:number) => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 
 function MarketplaceSimulator({ cost, panel, field, money, onBack }: { cost:number; panel:string; field:string; money:(n:number)=>string; onBack:()=>void }) {
+  const label = "mb-2 block text-sm font-semibold text-[#536D87]";
   const [marketplace,setMarketplace]=useState("Shopee"); const [fee,setFee]=useState("20"); const [fixed,setFixed]=useState("4"); const [ads,setAds]=useState("0"); const [shipping,setShipping]=useState("0"); const [tax,setTax]=useState("0"); const [salePrice,setSalePrice]=useState("49.90"); const [desiredProfit,setDesiredProfit]=useState("15");
   const totalRate=Math.min(95,Math.max(0,(Number(fee)||0)+(Number(ads)||0)+(Number(tax)||0)))/100; const price=Number(salePrice)||0; const net=price-price*totalRate-(Number(fixed)||0)-(Number(shipping)||0)-cost; const minimum=(cost+(Number(fixed)||0)+(Number(shipping)||0)+(Number(desiredProfit)||0))/(1-totalRate);
   const presets:Record<string,[string,string]>={"Shopee":["20","4"],"Mercado Livre":["13","6.25"],"Amazon":["15","2"],"Elo7":["12","0"],"Loja própria":["4.99","0"],"Outro marketplace":["15","0"]};
