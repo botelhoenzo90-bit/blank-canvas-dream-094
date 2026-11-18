@@ -39,6 +39,7 @@ export function AccessGate({ logo, children }: { logo: string; children: ReactNo
           className="mt-5 w-full rounded-xl border border-[#D7E8FF] bg-[#F3F8FF] px-3 py-3 text-sm outline-none focus:border-[#FF7A00]" />
         {error && <p className="mt-3 text-sm font-semibold text-red-600">{error}</p>}
         <button disabled={busy} className="mt-4 w-full rounded-xl bg-[#FF7A00] px-4 py-3 text-sm font-extrabold text-white disabled:opacity-60">{busy ? "Verificando..." : "ACESSAR"}</button>
+        <p className="mt-5 text-center text-xs text-[#536D87]">Suporte: <a href="mailto:primeflow200@gmail.com" className="font-semibold underline">primeflow200@gmail.com</a></p>
       </form>
     </main>
   );
