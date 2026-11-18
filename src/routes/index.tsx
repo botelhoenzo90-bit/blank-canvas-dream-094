@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import logoAsset from "@/assets/prime-logo-3d.png.asset.json";
+import { AccessGate } from "@/components/AccessGate";
 import ogAsset from "@/assets/og-prime-biblioteca.png.asset.json";
 
 const logoUrl = logoAsset.url;
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/")({
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:image", content: ogImage },
   ]}),
-  component: PrimeArea,
+  component: () => <AccessGate logo={logoUrl}><PrimeArea /></AccessGate>,
 });
 
 const drive = {
