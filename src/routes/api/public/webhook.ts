@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 // Aceita webhooks da Kiwify e da Cakto. Protegido pelo token ?token=SEU_TOKEN (secret WEBHOOK_TOKEN).
-type Any = Record<string, any>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Any = any;
 
 function pick(body: Any) {
   const email: string | undefined =
