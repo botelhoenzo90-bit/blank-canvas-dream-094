@@ -2,6 +2,30 @@
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123c70"><title>Calendário de Produção de Natal | Prime Projetos 3D</title>
 <style>
 :root{font-family:Inter,system-ui,sans-serif;color:#173b63;background:#f4f8fd;--blue:#1769ff;--navy:#123c70;--orange:#ff7a00;--muted:#637c98;--line:#d8e7f7}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0,#e6f1ff,transparent 32rem),#f4f8fd}.wrap{width:min(1050px,calc(100% - 28px));margin:auto;padding:22px 0 55px}.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.top a,.top button{border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:#fff;color:var(--navy);font-weight:800;text-decoration:none;cursor:pointer}.hero{margin-top:20px;padding:clamp(24px,5vw,48px);border-radius:26px;background:linear-gradient(125deg,#123c70,#1769ff 75%,#0d9bd4);color:white}.eyebrow{font-size:11px;letter-spacing:.17em;font-weight:900;color:#ffd29e}.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.04;letter-spacing:-.04em;margin:14px 0}.hero h1 span{color:#ffbf78}.hero p{max-width:760px;line-height:1.75;color:#e5efff}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}.stat{padding:14px;border:1px solid #ffffff35;background:#ffffff15;border-radius:15px}.stat b{display:block;font-size:27px;color:#ffbf78}.stat span{font-size:12px;color:#e5efff}.panel{margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px #173b6309}h2{margin:0 0 8px;font-size:24px;color:var(--navy)}h3{margin:4px 0 8px;color:var(--navy)}.muted{color:var(--muted);line-height:1.7}.meta{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}.bar{height:10px;background:#eaf1f9;border-radius:99px;overflow:hidden;margin-top:10px}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--orange));transition:width .2s}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 12px}.tabs button,.chip{border:1px solid var(--line);border-radius:99px;padding:10px 14px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.tabs button.active,.chip.active{background:var(--navy);color:#fff}.week{display:grid;grid-template-columns:145px 1fr;gap:16px;padding:18px;border:1px solid var(--line);border-radius:16px;margin:12px 0}.date{font-size:11px;letter-spacing:.08em;color:var(--orange);font-weight:900}.week p{margin:0;color:var(--muted);line-height:1.65}.tasks{display:grid;gap:8px;margin-top:12px}.task{display:flex;gap:10px;padding:11px;border-radius:11px;background:#f4f8fd;color:#49637e;font-size:14px;line-height:1.5}.task input{width:17px;height:17px;accent-color:var(--orange);margin-top:2px;flex:none}.task.done span{text-decoration:line-through;opacity:.55}.tip{margin-top:13px;padding:14px;border-left:4px solid var(--orange);border-radius:12px;background:#fff5e9;color:#85501e;font-size:14px;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font:inherit}.result{margin-top:14px;padding:16px;border:1px solid #d7e8ff;border-radius:15px;background:#edf5ff}.result b{font-size:26px;color:var(--blue)}.btn{border:0;border-radius:12px;background:var(--orange);color:white;padding:12px 16px;font-weight:900;cursor:pointer}.small{font-size:12px;color:var(--muted);line-height:1.6}.hidden{display:none!important}.footer{text-align:center;color:#8197ae;font-size:12px;margin-top:24px}@media(max-width:650px){.stats,.grid{grid-template-columns:1fr}.week{grid-template-columns:1fr;gap:8px}.panel{padding:16px}.top a,.top button{flex:1;text-align:center}}@media print{.top,.tabs,.btn{display:none}.hero{print-color-adjust:exact}.panel,.week{break-inside:avoid;box-shadow:none}}
+
+/* Mobile layout safeguards: consistent margins, no sideways page overflow */
+html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none}
+body{-webkit-overflow-scrolling:touch}
+img,svg,video,canvas{max-width:100%;height:auto}
+.wrap{width:min(100% - 32px,1120px);min-width:0}
+.panel,.hero,.layout,.grid,.stats,.controls,.summary,.week,.tile,.step{min-width:0;max-width:100%}
+h1,h2,h3,p,span,td,th,label{overflow-wrap:anywhere}
+input,select,button,textarea{max-width:100%;min-width:0}
+.tablewrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:650px){
+  .wrap{width:calc(100% - 28px);padding:14px 0 36px}
+  .hero{padding:22px 18px;border-radius:19px}
+  .hero h1{font-size:clamp(30px,9vw,42px);line-height:1.08;letter-spacing:-.035em}
+  .hero p{font-size:14px;line-height:1.65}
+  .panel{padding:15px;margin-top:14px;border-radius:16px}
+  .top{display:grid;grid-template-columns:1fr 1fr}
+  .top a,.top button{min-width:0;padding:10px 8px;font-size:12px}
+  .stats,.grid,.controls,.summary{grid-template-columns:minmax(0,1fr)}
+  .week{grid-template-columns:minmax(0,1fr);gap:8px;padding:14px}
+  .tabs{max-width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px;-webkit-overflow-scrolling:touch}
+  .tabs button,.chip{flex:0 0 auto;white-space:nowrap}
+}
+
 </style></head><body><main class="wrap">
 <div class="top"><a href="/">← Voltar à área de membros</a><button onclick="window.print()">Imprimir / salvar PDF</button></div>
 <section class="hero"><div class="eyebrow">BÔNUS INTERATIVO · PLANEJAMENTO SAZONAL</div><h1>Calendário de Produção <span>de Natal</span></h1><p>Saia do improviso: escolha o que produzir, prepare os anúncios, organize os pedidos e acompanhe cada etapa até a entrega. Marque as tarefas concluídas e adapte o plano à sua capacidade.</p><div class="stats"><div class="stat"><b id="days">—</b><span>dias até o Natal</span></div><div class="stat"><b>5 fases</b><span>do teste à entrega</span></div><div class="stat"><b id="percent">0%</b><span>do plano concluído</span></div></div></section>
