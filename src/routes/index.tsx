@@ -248,12 +248,17 @@ function PrimeArea() {
   const heading = (eyebrow:string,h:string,desc?:string) => <div className="mx-auto mb-8 max-w-4xl text-center"><p className="mb-2 text-xs font-black uppercase tracking-[.18em] text-[#FF7A00]">{eyebrow}</p><h2 className="text-3xl font-black tracking-tight text-[#173B63] sm:text-4xl">{h}</h2>{desc && <p className="mx-auto mt-3 max-w-3xl leading-7 text-[#607C98]">{desc}</p>}</div>;
   const linkButton = (href:string,text:string) => <a className={button} href={href} target={href.startsWith("http")?"_blank":undefined} rel={href.startsWith("http")?"noreferrer":undefined}>{text} <span aria-hidden>↗</span></a>;
 
-  return <div className="min-h-screen bg-[#EFF6FF] text-[#173B63] md:flex">
+  return <div className="min-h-screen min-w-0 overflow-x-clip bg-[#EFF6FF] text-[#173B63] md:flex">
     <aside className={`fixed inset-y-0 left-0 z-40 flex h-dvh w-[276px] flex-col border-r border-white/10 bg-[#111827] p-4 transition-transform duration-300 md:sticky md:top-0 md:h-screen md:translate-x-0 ${mobileNav?"translate-x-0":"-translate-x-full"}`}>
       <button onClick={()=>jump("Início")} className="mb-8 flex w-full items-center justify-center px-2 pt-2"><img src={logoUrl} alt="Prime 3D Biblioteca" className="h-auto w-full max-w-[215px] object-contain"/></button>
       <div className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[.22em] text-slate-300">Área do assinante</div>
       <nav className="flex flex-1 flex-col gap-1">{nav.map(([name,icon])=><button key={name} onClick={()=>jump(name)} className={`group flex items-center gap-3 rounded-xl px-3 py-3 text-left text-sm font-semibold transition-all duration-200 ${section===name?"bg-[#FF7A00] text-white shadow-[0_6px_22px_rgba(242,140,40,.18)]":"text-slate-300 hover:bg-white/10 hover:text-white"}`}><span className="text-base transition-transform group-hover:scale-110">{icon}</span>{name}{section===name&&<span className="ml-auto h-1.5 w-1.5 rounded-full bg-white"/>}</button>)}</nav>
-      <div className="mt-5 border-t border-white/10 px-3 pt-4"><p className="truncate text-xs text-slate-400">Área exclusiva Prime Projetos 3D</p></div>
+      <div className="mt-5 border-t border-white/10 px-3 pt-4">
+        <p className="mb-3 truncate text-xs text-slate-400">Área exclusiva Prime Projetos 3D</p>
+        <button onClick={()=>{setMobileNav(false);window.dispatchEvent(new Event("prime-logout"));}} className="flex w-full items-center gap-3 rounded-xl border border-white/10 px-3 py-3 text-left text-sm font-semibold text-slate-300 transition hover:border-red-400/40 hover:bg-red-500/10 hover:text-red-300">
+          <span aria-hidden>↪</span> Sair da conta
+        </button>
+      </div>
     </aside>
     {mobileNav&&<button aria-label="Fechar menu" onClick={()=>setMobileNav(false)} className="fixed inset-0 z-30 bg-black/60 md:hidden"/>}
     <main className="min-w-0 flex-1">
@@ -263,7 +268,7 @@ function PrimeArea() {
         <label className="hidden w-full max-w-xs items-center gap-2 rounded-xl border border-[#D7E8FF] bg-[#F3F8FF] px-3 py-2.5 focus-within:border-[#FF7A00]/70 sm:flex"><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Buscar categoria..." className="min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-[#A9C8F2]"/></label>
         <span className="hidden rounded-full border border-[#FF7A00]/20 bg-[#FFF0DF] px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#FF7A00] lg:inline-flex">Acesso liberado</span>
       </header>
-      <div className="mx-auto max-w-[1500px] px-4 py-7 sm:px-7 sm:py-9">
+      <div className="mx-auto w-full min-w-0 max-w-[1500px] px-3 py-5 sm:px-7 sm:py-9">
         {section==="Leia antes de começar" && <div className="space-y-5 animate-in fade-in duration-300">
           {heading("LEIA ANTES DE COMEÇAR","Bem-vindo ao Prime Projetos 3D 👋","1 minuto de leitura pra você saber exatamente o que tem aqui.")}
           <section className={`${panel} border-[#FF7A00]/40 p-5 sm:p-6`}><h3 className="text-center text-2xl font-extrabold">O que é o Prime Projetos 3D</h3><p className="mx-auto mt-3 max-w-5xl text-center leading-7 text-[#536D87]">O Prime Projetos 3D é uma <b className="text-[#173B63]">biblioteca de arquivos STL já prontos, separados e organizados por categoria</b>. A gente não cria os modelos: reunimos arquivos que já existem, muitos vindos de repositórios abertos como <b>MakerWorld, Printables e Thingiverse</b>, e fizemos a parte chata por você: procurar, baixar, separar e organizar tudo em pastas, pra você ir direto pra impressora.</p>
