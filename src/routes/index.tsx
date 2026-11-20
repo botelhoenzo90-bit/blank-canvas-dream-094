@@ -12,6 +12,7 @@ import bonusGanhar from "@/assets/bonus/ganhar-dinheiro.png.asset.json";
 import bonus15Nichos from "@/assets/bonus/15-nichos-ouro.webp.asset.json";
 import bonusCalc3d from "@/assets/bonus/calculadora-3d.webp.asset.json";
 import bonusCalcMkt from "@/assets/bonus/calculadora-marketplace.webp.asset.json";
+import bonusGuiaDefinitivo from "@/assets/bonus/guia-definitivo-capa.png.asset.json";
 import pdf30Nichos from "@/assets/bonus/guia-30-nichos.pdf.asset.json";
 import pdfGanhar from "@/assets/bonus/guia-ganhar-dinheiro.pdf.asset.json";
 
@@ -314,7 +315,7 @@ function PrimeArea() {
 
           <section className="overflow-hidden rounded-3xl border border-[#D7E8FF] bg-white shadow-[0_12px_40px_rgba(18,56,90,.06)]">
             <div className="grid gap-6 p-5 sm:p-8 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
-              <div className="overflow-hidden rounded-2xl bg-[#EEF6FF]"><img src="https://img.taidon.app/3d/guia-capa.webp" alt="Capa do Guia Definitivo de Impressão 3D" loading="lazy" className="mx-auto max-h-[420px] w-full object-contain"/></div>
+              <div className="overflow-hidden rounded-2xl bg-[#EEF6FF]"><img src={bonusGuiaDefinitivo.url} alt="Capa do Guia Definitivo de Impressão 3D" loading="lazy" className="mx-auto max-h-[420px] w-full object-contain"/></div>
               <div><p className="text-xs font-black uppercase tracking-[.18em] text-[#FF7A00]">GUIA EM PDF · 30 PÁGINAS</p><h2 className="mt-2 text-3xl font-black tracking-tight text-[#173B63]">Guia Definitivo de Impressão 3D</h2><p className="mt-3 leading-7 text-[#607C98]">Do download à peça perfeita: aprenda sobre fatiador, camadas, suportes, erros comuns e acabamento. Um passo a passo para acompanhar desde a escolha do arquivo até a finalização da peça.</p><div className="mt-5 grid gap-2 sm:grid-cols-3">{[["01","Prepare o computador"],["02","Baixe seu arquivo"],["03","Prepare e imprima"]].map(([n,t])=><div key={n} className="rounded-xl bg-[#F3F8FF] p-3"><span className="text-xs font-black text-[#FF7A00]">{n}</span><p className="mt-1 text-sm font-bold text-[#173B63]">{t}</p></div>)}</div><div className="mt-6 flex flex-wrap gap-3"><a href="https://bibliotecamakerpro-membros.netlify.app/guia/guia-definitivo-impressao-3d.pdf" target="_blank" rel="noreferrer" className={button}>BAIXAR GUIA EM PDF ↓</a><a href="https://bibliotecamakerpro-membros.netlify.app/guia/guia-definitivo-impressao-3d.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-xl border border-[#D7E8FF] px-4 py-3 text-sm font-extrabold text-[#173B63] transition hover:border-[#FF7A00]">ABRIR NO NAVEGADOR ↗</a></div><p className="mt-3 text-xs text-[#A9C8F2]">30 páginas · Consulte o mapa de assuntos e avance direto para cada etapa.</p></div>
             </div>
           </section>
