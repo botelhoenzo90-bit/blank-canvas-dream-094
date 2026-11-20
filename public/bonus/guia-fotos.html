@@ -1,5 +1,29 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123c70"><title>Guia de Fotos com Celular | Prime Projetos 3D</title><style>
 :root{font-family:Inter,system-ui,sans-serif;color:#173b63;background:#f4f8fd;--blue:#1769ff;--navy:#123c70;--orange:#ff7a00;--muted:#637c98;--line:#d8e7f7}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0,#e6f1ff,transparent 32rem),#f4f8fd}.wrap{width:min(1050px,calc(100% - 28px));margin:auto;padding:22px 0 55px}.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.top a,.top button{border:1px solid var(--line);border-radius:12px;padding:10px 14px;background:#fff;color:var(--navy);font-weight:800;text-decoration:none;cursor:pointer}.hero{margin-top:20px;padding:clamp(24px,5vw,48px);border-radius:26px;background:linear-gradient(125deg,#123c70,#1769ff 75%,#0d9bd4);color:white}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.17em;color:#ffd29e}.hero h1{font-size:clamp(34px,6vw,58px);line-height:1.03;letter-spacing:-.04em;margin:14px 0}.hero h1 span{color:#ffbf78}.hero p{max-width:760px;line-height:1.75;color:#e5efff}.pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.pills span{border:1px solid #ffffff35;background:#ffffff15;padding:9px 13px;border-radius:99px;font-size:12px;font-weight:800}.panel{margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px #173b6309}h2{margin:0 0 8px;color:var(--navy);font-size:24px}h3{margin:4px 0 7px;color:var(--navy)}.muted{color:var(--muted);line-height:1.7}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.step{padding:16px;border:1px solid var(--line);border-radius:15px;background:#f9fbff}.num{display:inline-grid;place-items:center;width:31px;height:31px;border-radius:10px;background:#fff0df;color:var(--orange);font-weight:900;margin-bottom:8px}.step p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}.tip{margin-top:13px;padding:14px;border-left:4px solid var(--orange);border-radius:12px;background:#fff5e9;color:#85501e;font-size:14px;line-height:1.6}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 12px}.tabs button{border:1px solid var(--line);border-radius:99px;padding:10px 14px;background:#fff;color:var(--navy);font-weight:800;cursor:pointer}.tabs button.active{background:var(--navy);color:#fff}.checks{display:grid;gap:8px;margin-top:14px}.check{display:flex;gap:10px;padding:11px;border-radius:11px;background:#f4f8fd;color:#49637e;font-size:14px;line-height:1.5}.check input{width:17px;height:17px;accent-color:var(--orange);margin-top:2px;flex:none}.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font:inherit}.btn{border:0;border-radius:12px;background:var(--orange);color:#fff;padding:12px 16px;font-weight:900;cursor:pointer}.result{margin-top:14px;padding:16px;border:1px solid #d7e8ff;border-radius:15px;background:#edf5ff}.small{font-size:12px;color:var(--muted);line-height:1.6}.hidden{display:none!important}.footer{text-align:center;color:#8197ae;font-size:12px;margin-top:24px}@media(max-width:650px){.grid{grid-template-columns:1fr}.panel{padding:16px}.top a,.top button{flex:1;text-align:center}}@media print{.top,.tabs,.btn{display:none}.hero{print-color-adjust:exact}.panel,.step{break-inside:avoid;box-shadow:none}}
+
+/* Mobile layout safeguards: consistent margins, no sideways page overflow */
+html,body{width:100%;max-width:100%;overflow-x:clip;overscroll-behavior-x:none}
+body{-webkit-overflow-scrolling:touch}
+img,svg,video,canvas{max-width:100%;height:auto}
+.wrap{width:min(100% - 32px,1120px);min-width:0}
+.panel,.hero,.layout,.grid,.stats,.controls,.summary,.week,.tile,.step{min-width:0;max-width:100%}
+h1,h2,h3,p,span,td,th,label{overflow-wrap:anywhere}
+input,select,button,textarea{max-width:100%;min-width:0}
+.tablewrap{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media(max-width:650px){
+  .wrap{width:calc(100% - 28px);padding:14px 0 36px}
+  .hero{padding:22px 18px;border-radius:19px}
+  .hero h1{font-size:clamp(30px,9vw,42px);line-height:1.08;letter-spacing:-.035em}
+  .hero p{font-size:14px;line-height:1.65}
+  .panel{padding:15px;margin-top:14px;border-radius:16px}
+  .top{display:grid;grid-template-columns:1fr 1fr}
+  .top a,.top button{min-width:0;padding:10px 8px;font-size:12px}
+  .stats,.grid,.controls,.summary{grid-template-columns:minmax(0,1fr)}
+  .week{grid-template-columns:minmax(0,1fr);gap:8px;padding:14px}
+  .tabs{max-width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px;-webkit-overflow-scrolling:touch}
+  .tabs button,.chip{flex:0 0 auto;white-space:nowrap}
+}
+
 </style></head><body><main class="wrap"><div class="top"><a href="/">← Voltar à área de membros</a><button onclick="window.print()">Imprimir / salvar PDF</button></div>
 <section class="hero"><div class="eyebrow">BÔNUS PRÁTICO · FOTOGRAFIA DE PRODUTO</div><h1>Fotos que valorizam <span>suas peças 3D</span></h1><p>Transforme um celular, uma janela e materiais simples em fotos mais profissionais. Mostre o produto com clareza, destaque acabamento e ajude o cliente a entender exatamente o que está comprando — sem estúdio e sem câmera profissional.</p><div class="pills"><span>📱 Só precisa do celular</span><span>☀️ Luz natural</span><span>📦 Fotos para anúncios</span><span>🎯 Roteiro prático</span></div></section>
 <section class="panel"><h2>Monte seu miniestúdio em 5 minutos</h2><p class="muted">Você não precisa comprar equipamento caro. Comece com o que já tem em casa.</p><div class="grid">
