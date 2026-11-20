@@ -17,6 +17,17 @@ export function AccessGate({ logo, children }: { logo: string; children: ReactNo
     check({ data: { email: saved } }).then(r => setState(r.allowed ? "in" : "out")).catch(() => setState("out"));
   }, []);
 
+  useEffect(() => {
+    const logout = () => {
+      localStorage.removeItem(KEY);
+      setEmail("");
+      setError("");
+      setState("out");
+    };
+    window.addEventListener("prime-logout", logout);
+    return () => window.removeEventListener("prime-logout", logout);
+  }, []);
+
   async function submit(e: React.FormEvent) {
     e.preventDefault(); setError(""); setBusy(true);
     try {
@@ -27,7 +38,7 @@ export function AccessGate({ logo, children }: { logo: string; children: ReactNo
     setBusy(false);
   }
 
-  if (state === "in") return <>{children}<button onClick={() => { localStorage.removeItem(KEY); setState("out"); }} className="fixed bottom-4 left-4 z-50 rounded-lg border border-[#D7E8FF] bg-white px-3 py-2 text-xs font-bold text-[#536D87] shadow">Sair</button></>;
+  if (state === "in") return <>{children}</>;
   if (state === "loading") return <div className="min-h-screen bg-[#F3F8FF]" />;
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#0B1F3A] px-4">
